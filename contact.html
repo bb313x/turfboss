@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 <style>
 body { font-size:16px; }
 </style>
@@ -70,11 +70,11 @@ body { font-size:16px; }
     <div class="page-hero-content">
       <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Contact Us</span></div>
       <h1>Get Your Free Quote</h1>
-      <p style="color:rgba(255,255,255,0.85);font-size:1.15rem;max-width:600px;margin-top:1rem">No obligation. No pressure. Just a free consultation and honest estimate from Ocean County's most trusted turf installer.</p>
+      <p style="color:rgba(255,255,255,0.85);font-size:1.15rem;max-width:600px;margin-top:1rem">No obligation. No pressure. Just a free consultation and honest estimate from Monmouth &amp; Ocean County's most trusted turf installer.</p>
     </div>
   </div>
 </section>
-<!-- Monday.com Webhook: Replace WEBHOOK_URL in js/main.js?v=2 with your actual Monday.com webhook endpoint -->
+<!-- Monday.com Webhook: Replace WEBHOOK_URL in js/main.js?v=3 with your actual Monday.com webhook endpoint -->
 <section class="section contact-section">
   <div class="container">
     <div class="contact-layout">
@@ -178,7 +178,7 @@ body { font-size:16px; }
 <section class="section-sm" style="background:#1a1a1a">
   <div class="container">
     <div class="text-center" style="color:white">
-      <h3 style="color:white;margin-bottom:0.5rem">📍 Serving All of Ocean County & Greater New Jersey</h3>
+      <h3 style="color:white;margin-bottom:0.5rem">📍 Serving All of Monmouth County, Ocean County &amp; Greater New Jersey</h3>
       <p style="color:rgba(255,255,255,0.7)">Toms River · Brick · Lacey · Jackson · Point Pleasant · Manahawkin · Barnegat · Beachwood · Lavallette · Seaside Heights · Long Beach Island · and more</p>
     </div>
   </div>
@@ -188,7 +188,7 @@ body { font-size:16px; }
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/logo.png" alt="Turf Boss NJ" style="height:56px;filter:brightness(10);margin-bottom:1.25rem">
-        <p class="footer-desc">Ocean County's premier artificial turf installer. Serving NJ homeowners, businesses, and communities with premium synthetic grass solutions since 2014.</p>
+        <p class="footer-desc">Monmouth &amp; Monmouth &amp; Ocean County's premier artificial turf installer. Serving NJ homeowners, businesses, and communities with premium synthetic grass solutions since 2014.</p>
         <div class="footer-social">
           <a href="https://facebook.com" class="social-btn" title="Facebook" target="_blank">f</a>
           <a href="https://instagram.com" class="social-btn" title="Instagram" target="_blank">📷</a>
@@ -240,14 +240,14 @@ body { font-size:16px; }
   <a href="tel:7322001234" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.5)">📞 Call Now</a>
   <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
 </div>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
 
 <!-- Free Quote Modal -->
 <div class="quote-modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Request a Free Quote">
   <div class="quote-modal">
-    <button class="quote-modal-close" id="quoteModalClose" aria-label="Close">&times;</button>
+    <button class="quote-modal-close" id="quoteModalClose" aria-label="Close" onclick="document.getElementById('quoteModal').classList.remove('open');document.body.style.overflow=''">&times;</button>
     <h2>Get Your Free Quote</h2>
-    <p class="modal-sub">Ocean County &amp; Monmouth County's #1 Turf Installer. We'll respond within 24 hours.</p>
+    <p class="modal-sub">Monmouth &amp; Ocean County's #1 Turf Installer. We'll respond within 24 hours.</p>
     <form id="modal-quote-form" novalidate>
       <div class="form-group">
         <label for="modal-name">Full Name *</label>
