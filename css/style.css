@@ -19,12 +19,17 @@
   --off-white:      #f8f8f6;
   --white:          #ffffff;
   --gold:           #D4AF37;
-  --shadow-sm:      0 2px 8px rgba(0,0,0,0.08);
-  --shadow-md:      0 6px 24px rgba(0,0,0,0.12);
-  --shadow-lg:      0 16px 48px rgba(0,0,0,0.18);
-  --radius:         6px;
-  --radius-lg:      12px;
-  --transition:     all 0.3s ease;
+  --shadow-sm:      0 1px 2px rgba(17,24,39,0.04), 0 2px 6px rgba(17,24,39,0.06);
+  --shadow-md:      0 4px 12px rgba(17,24,39,0.06), 0 10px 30px rgba(17,24,39,0.10);
+  --shadow-lg:      0 12px 24px rgba(17,24,39,0.08), 0 32px 64px rgba(17,24,39,0.18);
+  --shadow-ring:    0 0 0 4px rgba(46,125,50,0.14);
+  --radius-sm:      8px;
+  --radius:         12px;
+  --radius-lg:      20px;
+  --radius-xl:      28px;
+  --transition:     all 0.25s cubic-bezier(.2,.8,.2,1);
+  --ease-out:       cubic-bezier(.2,.8,.2,1);
+  --border-subtle:  1px solid rgba(17,24,39,0.08);
   --font-heading:   'Montserrat', sans-serif;
   --font-body:      'Open Sans', sans-serif;
   --nav-height:     80px;
@@ -404,3 +409,173 @@ textarea.form-control { resize:vertical; min-height:120px; }
   .quote-modal { padding: 28px 20px; }
   .quote-modal h2 { font-size: 1.3rem; }
 }
+
+/* ============================================================
+   MODERN REFRESH — 2026 aesthetic pass
+   Softer radii, layered shadows, refined forms, polished buttons
+   ============================================================ */
+
+/* ── Buttons: softer, gradient primary, refined shadow ── */
+.btn {
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: none;
+  font-size: 0.95rem;
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--green-light) 0%, var(--green-primary) 60%, var(--green-dark) 100%);
+  color: #fff;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset, 0 8px 20px rgba(27,94,32,0.25);
+  border: 1px solid rgba(27,94,32,0.35);
+}
+.btn-primary:hover {
+  background: linear-gradient(180deg, var(--green-primary) 0%, var(--green-dark) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset, 0 14px 28px rgba(27,94,32,0.32);
+  color: #fff;
+}
+.btn-outline { border-radius: 10px; border-width: 1.5px; }
+.btn-outline-green { border-radius: 10px; border-width: 1.5px; }
+.btn-lg { padding: 17px 38px; font-size: 1rem; border-radius: 12px; }
+.btn-sm { padding: 10px 20px; font-size: 0.82rem; border-radius: 8px; }
+
+/* ── Form controls: modern, generous, clear focus ── */
+.form-control {
+  padding: 14px 16px;
+  border: 1.5px solid rgba(17,24,39,0.12);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #fafafa;
+  transition: border-color .2s var(--ease-out), box-shadow .2s var(--ease-out), background .2s var(--ease-out);
+}
+.form-control:hover { background: #fff; border-color: rgba(17,24,39,0.18); }
+.form-control:focus {
+  border-color: var(--green-primary);
+  background: #fff;
+  box-shadow: var(--shadow-ring);
+}
+.form-control::placeholder { color: rgba(17,24,39,0.35); font-size: 0.92rem; }
+textarea.form-control { min-height: 110px; line-height: 1.55; }
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+/* Labels: lower-case, refined, less shouty */
+.form-group label,
+.form-label {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #374151;
+  margin-bottom: 6px;
+}
+.form-group label::after,
+.form-label::after { content: ''; }
+.form-group label[for]:has(+ [required])::after { content: ' *'; color: var(--green-primary); }
+
+/* ── Modal: glassy overlay, floating card, generous radius ── */
+.quote-modal-overlay {
+  background: rgba(13,24,17,0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px;
+}
+.quote-modal {
+  border-radius: 20px;
+  padding: 36px 36px 32px;
+  max-width: 520px;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.05),
+    0 24px 48px rgba(0,0,0,0.25),
+    0 40px 80px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.6);
+  animation: modal-pop .28s var(--ease-out);
+}
+@keyframes modal-pop {
+  from { opacity: 0; transform: translateY(8px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+.quote-modal h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+.quote-modal p.modal-sub {
+  color: #6b7280;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+.quote-modal .form-group { margin-bottom: 14px; }
+.quote-modal .btn { width: 100%; justify-content: center; }
+.quote-modal-close {
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(17,24,39,0.06);
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: var(--transition);
+}
+.quote-modal-close:hover { background: rgba(17,24,39,0.12); color: #111; }
+
+/* ── Quote form (contact page) polish ── */
+.quote-form {
+  border-radius: 20px;
+  padding: 44px 40px;
+  border: var(--border-subtle);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Cards: softer radii across the board ── */
+.feature-card,
+.testimonial-card,
+.financing-card,
+.dropdown,
+.contact-info-card,
+.service-card,
+.gallery-item {
+  border-radius: 18px;
+}
+.feature-card { padding: 36px 28px; border: 1px solid rgba(17,24,39,0.06); }
+.feature-card:hover { border-color: rgba(46,125,50,0.35); }
+.accordion-item { border-radius: 12px; border-color: rgba(17,24,39,0.08); }
+
+/* ── Hero badge / chips: more polished ── */
+.hero-badge { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.badge { padding: 5px 12px; font-weight: 600; letter-spacing: 0.2px; text-transform: none; font-size: 0.78rem; }
+
+/* ── Nav link hover: crisper ── */
+.nav-link { border-radius: 10px; letter-spacing: 0.2px; }
+.dropdown-item { padding: 13px 22px; }
+.dropdown { border-radius: 14px; border: var(--border-subtle); }
+
+/* ── Scroll-top: cleaner ── */
+.scroll-top { border-radius: 14px; width: 46px; height: 46px; }
+
+/* ── Subtle section-label refinement ── */
+.section-label {
+  letter-spacing: 2px;
+  font-size: 0.72rem;
+  color: var(--green-primary);
+}
+
+/* ── Contact info card: refined radius ── */
+.contact-info-card { border-radius: 20px; padding: 44px 36px; }
+
