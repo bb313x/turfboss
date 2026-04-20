@@ -114,17 +114,30 @@
       const nameParts = (data.name || '').trim().split(/\s+/);
       data.first_name = nameParts[0] || '';
       data.last_name = nameParts.slice(1).join(' ') || '';
+      let ok = false;
       try {
-        await fetch(WORKER_URL, {
+        const resp = await fetch(WORKER_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
         });
+        ok = resp && resp.ok;
       } catch (err) { console.error('Form error:', err); }
-      showToast('\u2705 Request received! We\'ll contact you within 24 hours.', 'success');
-      formEl.reset();
+      if (ok) {
+        showToast('\u2705 Request received! We\'ll contact you within 24 hours.', 'success');
+        formEl.reset();
+        if (modalOverlay) { modalOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+      } else {
+        // Fallback: pre-fill a mailto so the lead is never silently lost
+        const subject = encodeURIComponent('Turf Boss NJ - Quote Request (form fallback)');
+        const body = encodeURIComponent(
+          'Our web form couldn\'t submit. Here are my details:\n\n' +
+          Object.entries(data).map(([k,v]) => k + ': ' + v).join('\n')
+        );
+        showToast('\u26A0\uFE0F Submission had trouble \u2014 opening email as a backup. We\'ll still get it.', 'info');
+        setTimeout(() => { window.location.href = 'mailto:info@turfbossnj.com?subject=' + subject + '&body=' + body; }, 800);
+      }
       btn.textContent = orig; btn.disabled = false;
-      if (modalOverlay) { modalOverlay.classList.remove('open'); document.body.style.overflow = ''; }
     });
   }
 
