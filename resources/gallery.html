@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Artificial Turf Gallery | Turf Boss NJ</title>
+<meta name="description" content="Browse the Turf Boss NJ gallery — residential lawns, commercial installs, backyard putting greens, pet runs, rooftops, pool decks, and more. Real NJ projects from Monmouth &amp; Ocean County's #1 artificial turf installer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=7">
+<style>
+.gallery-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2rem 0 2.5rem}
+.gallery-filter{background:#fff;border:2px solid #e5e5e5;color:#333;padding:10px 20px;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;border-radius:999px;cursor:pointer;transition:all 0.2s}
+.gallery-filter:hover{border-color:#2E7D32;color:#2E7D32}
+.gallery-filter.active{background:#2E7D32;border-color:#2E7D32;color:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.gallery-item{position:relative;border-radius:12px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;background:#f2f2f2;transition:transform 0.2s, box-shadow 0.2s}
+.gallery-item:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,0.15)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item .tag{position:absolute;top:10px;left:10px;background:rgba(46,125,50,0.92);color:#fff;font-family:Montserrat,sans-serif;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:5px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+.gallery-item.hidden{display:none}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;padding:2rem;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.lightbox-close{position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;line-height:1;font-weight:300}
+.lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;font-family:Montserrat,sans-serif;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;background:rgba(0,0,0,0.6);padding:8px 18px;border-radius:999px}
+.gallery-empty{text-align:center;padding:3rem;color:#777;font-family:Open Sans,sans-serif}
+@media (max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}.gallery-filter{padding:8px 14px;font-size:0.75rem}}
+</style>
+</head>
+<body>
+<div class="announcement-bar">🏆 Monmouth &amp; Ocean County's #1 Rated Artificial Turf Installer &nbsp;|&nbsp; <span class="phone">📞 <a href="tel:7322001234">(732) 200-1234</a></span> &nbsp;|&nbsp; <a href="../contact.html">Get Your FREE Quote Today →</a></div>
+<header class="site-header"><div class="container"><nav class="nav-inner">
+  <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Turf Boss NJ" style="height:60px" onerror="this.parentElement.innerHTML='<span style=&quot;font-family:Montserrat;font-weight:900;font-size:1.3rem;color:#2E7D32&quot;>TURF BOSS NJ</span>'"></a>
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="../index.html" class="nav-link ">Home</a></li>
+    <li class="nav-item"><a href="../services/index.html" class="nav-link ">Services <span class="chevron">▾</span></a>
+      <ul class="dropdown">
+        <li><a class="dropdown-item" href="../services/artificial-grass.html"><span class="icon">🌿</span> Artificial Grass</a></li>
+        <li><a class="dropdown-item" href="../services/residential.html"><span class="icon">🏡</span> Residential</a></li>
+        <li><a class="dropdown-item" href="../services/commercial.html"><span class="icon">🏢</span> Commercial</a></li>
+        <li><a class="dropdown-item" href="../services/pets.html"><span class="icon">🐾</span> Pets & Dog Runs</a></li>
+        <li><a class="dropdown-item" href="../services/putting-greens.html"><span class="icon">⛳</span> Putting Greens</a></li>
+        <li><a class="dropdown-item" href="../services/schools-playgrounds.html"><span class="icon">🛝</span> Schools & Playgrounds</a></li>
+        <li><a class="dropdown-item" href="../services/rooftops-pool-decks.html"><span class="icon">🏊</span> Rooftops & Pool Decks</a></li>
+        <li><a class="dropdown-item" href="../services/apartments-hoas.html"><span class="icon">🏘️</span> Apartments & HOAs</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+    <li class="nav-item"><a href="../maintenance.html" class="nav-link ">Maintenance</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link ">Resources</a></li>
+    <li class="nav-item"><a href="../low-voltage-lighting.html" class="nav-link ">Lighting</a></li>
+    <li class="nav-item"><a href="../financing.html" class="nav-link ">Financing</a></li>
+    <li class="nav-item"><a href="../about.html" class="nav-link " style="white-space:nowrap">About Us</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="tel:7322001234" class="nav-phone">📞 (732) 200-1234</a>
+    <a href="../contact.html" class="btn btn-primary btn-sm">Free Quote</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav></div></header>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <div class="mobile-nav-logo"><img src="../images/logo.png" alt="Turf Boss NJ" style="height:48px"></div>
+  <ul class="mobile-nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li class="mobile-has-sub"><a href="#">Services ▾</a><ul class="mobile-submenu" style="display:none">
+      <li><a href="../services/artificial-grass.html">Artificial Grass</a></li>
+      <li><a href="../services/residential.html">Residential</a></li>
+      <li><a href="../services/commercial.html">Commercial</a></li>
+      <li><a href="../services/pets.html">Pets & Dog Runs</a></li>
+      <li><a href="../services/putting-greens.html">Putting Greens</a></li>
+      <li><a href="../services/schools-playgrounds.html">Schools & Playgrounds</a></li>
+      <li><a href="../services/rooftops-pool-decks.html">Rooftops & Pool Decks</a></li>
+      <li><a href="../services/apartments-hoas.html">Apartments & HOAs</a></li>
+    </ul></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="../maintenance.html">Maintenance</a></li>
+    <li><a href="index.html">Resources</a></li>
+    <li><a href="../low-voltage-lighting.html">Lighting</a></li>
+    <li><a href="../financing.html">Financing</a></li>
+    <li><a href="../about.html" style="white-space:nowrap">About Us</a></li>
+  </ul>
+  <div class="mobile-nav-cta"><a href="../contact.html" class="btn btn-primary" style="width:100%;margin-bottom:10px">Get Free Quote</a><a href="tel:7322001234" class="btn btn-outline" style="width:100%">📞 (732) 200-1234</a></div>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('../images/residential-luxury-home-evening-uplighting-38.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Gallery</span></div>
+      <h1>Our Work</h1>
+      <p style="color:rgba(255,255,255,0.95);font-size:1.1rem;max-width:640px;margin-top:1rem">Real projects from across New Jersey — backyards, businesses, putting greens, pool decks, and everything between. Tap any photo to see it full-size.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="gallery-filter active" data-filter="all">All</button>
+      <button class="gallery-filter" data-filter="residential">Residential</button>
+      <button class="gallery-filter" data-filter="commercial">Commercial</button>
+      <button class="gallery-filter" data-filter="putting-greens">Putting Greens</button>
+      <button class="gallery-filter" data-filter="pets">Pets & Dog Runs</button>
+      <button class="gallery-filter" data-filter="rooftops">Rooftops & Pool Decks</button>
+      <button class="gallery-filter" data-filter="schools">Schools & Playgrounds</button>
+      <button class="gallery-filter" data-filter="lighting">Lighting</button>
+      <button class="gallery-filter" data-filter="installation">Installation</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- RESIDENTIAL -->
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-craftsman-home-lush-front-lawn-16.jpg" data-caption="Residential — Craftsman front lawn"><img src="../images/residential-craftsman-home-lush-front-lawn-16.jpg" alt="Craftsman home with lush turf front lawn" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-luxury-home-evening-uplighting-38.jpg" data-caption="Residential — Luxury home with evening uplighting"><img src="../images/residential-luxury-home-evening-uplighting-38.jpg" alt="Luxury home with evening uplighting and turf" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-luxury-estate-driveway-evening-37.jpg" data-caption="Residential — Luxury estate driveway"><img src="../images/residential-luxury-estate-driveway-evening-37.jpg" alt="Luxury estate driveway with turf accents" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-backyard-japanese-maple-nj-feel-11.jpg" data-caption="Residential — NJ backyard with Japanese maple"><img src="../images/residential-backyard-japanese-maple-nj-feel-11.jpg" alt="NJ backyard with Japanese maple and artificial turf" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-pool-area-residential-pavers-turf-40.jpg" data-caption="Residential — Pool area with pavers &amp; turf"><img src="../images/residential-pool-area-residential-pavers-turf-40.jpg" alt="Pool area with pavers and artificial turf" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-backyard-gazebo-patio-turf-10.jpg" data-caption="Residential — Backyard gazebo &amp; patio"><img src="../images/residential-backyard-gazebo-patio-turf-10.jpg" alt="Backyard with gazebo, patio and artificial turf" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-hillside-backyard-koi-pond-31.jpg" data-caption="Residential — Hillside backyard with koi pond"><img src="../images/residential-hillside-backyard-koi-pond-31.jpg" alt="Hillside backyard with koi pond and turf" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-front-yard-stepping-stones-turf-24.jpg" data-caption="Residential — Front yard with stepping stones"><img src="../images/residential-front-yard-stepping-stones-turf-24.jpg" alt="Front yard with stepping stones and turf" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-tudor-home-front-lawn-72.jpg" data-caption="Residential — Tudor home front lawn"><img src="../images/residential-tudor-home-front-lawn-72.jpg" alt="Tudor home with turf front lawn" loading="lazy"><span class="tag">Residential</span></div>
+      <div class="gallery-item" data-cat="residential" data-src="../images/residential-zen-garden-pagoda-backyard-76.jpg" data-caption="Residential — Zen garden backyard"><img src="../images/residential-zen-garden-pagoda-backyard-76.jpg" alt="Zen garden backyard with pagoda and turf" loading="lazy"><span class="tag">Residential</span></div>
+
+      <!-- COMMERCIAL -->
+      <div class="gallery-item" data-cat="commercial" data-src="../images/commercial-multi-field-sports-complex-turf-07.jpg" data-caption="Commercial — Multi-field sports complex"><img src="../images/commercial-multi-field-sports-complex-turf-07.jpg" alt="Commercial multi-field sports complex turf" loading="lazy"><span class="tag">Commercial</span></div>
+      <div class="gallery-item" data-cat="commercial" data-src="../images/commercial-indoor-artificial-turf-field-05.jpg" data-caption="Commercial — Indoor artificial turf field"><img src="../images/commercial-indoor-artificial-turf-field-05.jpg" alt="Indoor commercial artificial turf field" loading="lazy"><span class="tag">Commercial</span></div>
+      <div class="gallery-item" data-cat="commercial" data-src="../images/commercial-indoor-soccer-facility-turf-field-01.jpg" data-caption="Commercial — Indoor soccer facility"><img src="../images/commercial-indoor-soccer-facility-turf-field-01.jpg" alt="Indoor soccer facility with turf field" loading="lazy"><span class="tag">Commercial</span></div>
+      <div class="gallery-item" data-cat="commercial" data-src="../images/commercial-ccgrass-artificial-turf-baseball-field-03.jpg" data-caption="Commercial — Baseball field"><img src="../images/commercial-ccgrass-artificial-turf-baseball-field-03.jpg" alt="Commercial artificial turf baseball field" loading="lazy"><span class="tag">Commercial</span></div>
+      <div class="gallery-item" data-cat="commercial" data-src="../images/commercial-sports-field-at-night-stadium-lights-09.jpg" data-caption="Commercial — Sports field at night"><img src="../images/commercial-sports-field-at-night-stadium-lights-09.jpg" alt="Sports field with stadium lights at night" loading="lazy"><span class="tag">Commercial</span></div>
+      <div class="gallery-item" data-cat="commercial" data-src="../images/commercial-football-field-artificial-sports-turf-04.jpg" data-caption="Commercial — Football field"><img src="../images/commercial-football-field-artificial-sports-turf-04.jpg" alt="Commercial football field with artificial sports turf" loading="lazy"><span class="tag">Commercial</span></div>
+
+      <!-- PUTTING GREENS -->
+      <div class="gallery-item" data-cat="putting-greens" data-src="../images/putting-greens-evergrass-putting-green-turf-on-03.jpg" data-caption="Putting Greens — Backyard putting green"><img src="../images/putting-greens-evergrass-putting-green-turf-on-03.jpg" alt="Backyard putting green turf" loading="lazy"><span class="tag">Putting Greens</span></div>
+      <div class="gallery-item" data-cat="putting-greens" data-src="../images/putting-greens-bellerivecountryclub-01.jpg" data-caption="Putting Greens — Country club quality"><img src="../images/putting-greens-bellerivecountryclub-01.jpg" alt="Country club quality putting green" loading="lazy"><span class="tag">Putting Greens</span></div>
+      <div class="gallery-item" data-cat="putting-greens" data-src="../images/putting-greens-bunker-shot-par-green-02.jpg" data-caption="Putting Greens — Bunker shot to par green"><img src="../images/putting-greens-bunker-shot-par-green-02.jpg" alt="Bunker shot to par green with turf" loading="lazy"><span class="tag">Putting Greens</span></div>
+
+      <!-- PETS -->
+      <div class="gallery-item" data-cat="pets" data-src="../images/pets-happy-dog-artificial-grass-backyard-01.jpg" data-caption="Pets — Happy dog on artificial grass"><img src="../images/pets-happy-dog-artificial-grass-backyard-01.jpg" alt="Happy dog on artificial grass backyard" loading="lazy"><span class="tag">Pets</span></div>
+      <div class="gallery-item" data-cat="pets" data-src="../images/pets-dog-e1599869220960-03.jpg" data-caption="Pets — Dog enjoying pet-friendly turf"><img src="../images/pets-dog-e1599869220960-03.jpg" alt="Dog enjoying pet-friendly turf" loading="lazy"><span class="tag">Pets</span></div>
+      <div class="gallery-item" data-cat="pets" data-src="../images/pets-boston-terrier-playing-turf-02.jpg" data-caption="Pets — Boston terrier playing on turf"><img src="../images/pets-boston-terrier-playing-turf-02.jpg" alt="Boston terrier playing on artificial turf" loading="lazy"><span class="tag">Pets</span></div>
+      <div class="gallery-item" data-cat="pets" data-src="../images/pets-dog-running-jump-play-turf-04.jpg" data-caption="Pets — Dog running on turf"><img src="../images/pets-dog-running-jump-play-turf-04.jpg" alt="Dog running and playing on turf" loading="lazy"><span class="tag">Pets</span></div>
+      <div class="gallery-item" data-cat="pets" data-src="../images/pets-synthetic-pet-turf-09.jpg" data-caption="Pets — Synthetic pet turf run"><img src="../images/pets-synthetic-pet-turf-09.jpg" alt="Synthetic pet turf run" loading="lazy"><span class="tag">Pets</span></div>
+
+      <!-- ROOFTOPS / POOL DECKS -->
+      <div class="gallery-item" data-cat="rooftops" data-src="../images/rooftops-pool-decks-rooftop-terrace-striped-turf-lounge-09.jpg" data-caption="Rooftops — Terrace with striped turf lounge"><img src="../images/rooftops-pool-decks-rooftop-terrace-striped-turf-lounge-09.jpg" alt="Rooftop terrace with striped turf lounge" loading="lazy"><span class="tag">Rooftops</span></div>
+      <div class="gallery-item" data-cat="rooftops" data-src="../images/rooftops-pool-decks-pool-deck-pavers-turf-white-stripe-05.jpg" data-caption="Pool Decks — Pavers &amp; turf with white stripe"><img src="../images/rooftops-pool-decks-pool-deck-pavers-turf-white-stripe-05.jpg" alt="Pool deck pavers and turf with white stripe" loading="lazy"><span class="tag">Pool Decks</span></div>
+      <div class="gallery-item" data-cat="rooftops" data-src="../images/rooftops-pool-decks-rooftop-with-installed-artificial-turf-10.jpg" data-caption="Rooftops — Urban rooftop turf installation"><img src="../images/rooftops-pool-decks-rooftop-with-installed-artificial-turf-10.jpg" alt="Urban rooftop with installed artificial turf" loading="lazy"><span class="tag">Rooftops</span></div>
+      <div class="gallery-item" data-cat="rooftops" data-src="../images/rooftops-pool-decks-backyard-artificial-grass-pool-area-02.jpg" data-caption="Pool Decks — Backyard pool area"><img src="../images/rooftops-pool-decks-backyard-artificial-grass-pool-area-02.jpg" alt="Backyard artificial grass pool area" loading="lazy"><span class="tag">Pool Decks</span></div>
+      <div class="gallery-item" data-cat="rooftops" data-src="../images/rooftops-pool-decks-pool-deck-coastal-sunset-lighting-04.jpg" data-caption="Pool Decks — Coastal sunset pool deck"><img src="../images/rooftops-pool-decks-pool-deck-coastal-sunset-lighting-04.jpg" alt="Pool deck at coastal sunset with lighting" loading="lazy"><span class="tag">Pool Decks</span></div>
+      <div class="gallery-item" data-cat="rooftops" data-src="../images/rooftops-pool-decks-rooftop-terrace-city-view-evening-08.jpg" data-caption="Rooftops — Terrace with city view"><img src="../images/rooftops-pool-decks-rooftop-terrace-city-view-evening-08.jpg" alt="Rooftop terrace with city view in the evening" loading="lazy"><span class="tag">Rooftops</span></div>
+
+      <!-- SCHOOLS / PLAYGROUNDS -->
+      <div class="gallery-item" data-cat="schools" data-src="../images/schools-playgrounds-playground-community-area-turf-04.jpg" data-caption="Schools &amp; Playgrounds — Community playground"><img src="../images/schools-playgrounds-playground-community-area-turf-04.jpg" alt="Community playground with turf" loading="lazy"><span class="tag">Schools</span></div>
+      <div class="gallery-item" data-cat="schools" data-src="../images/schools-playgrounds-church-playground-gallery-01.jpg" data-caption="Schools &amp; Playgrounds — Church playground"><img src="../images/schools-playgrounds-church-playground-gallery-01.jpg" alt="Church playground with artificial turf" loading="lazy"><span class="tag">Schools</span></div>
+      <div class="gallery-item" data-cat="schools" data-src="../images/schools-playgrounds-community-park-picnic-table-turf-02.jpg" data-caption="Schools &amp; Playgrounds — Community park"><img src="../images/schools-playgrounds-community-park-picnic-table-turf-02.jpg" alt="Community park with picnic table on turf" loading="lazy"><span class="tag">Schools</span></div>
+      <div class="gallery-item" data-cat="schools" data-src="../images/schools-playgrounds-playground-03.jpg" data-caption="Schools &amp; Playgrounds — Playground"><img src="../images/schools-playgrounds-playground-03.jpg" alt="Playground with artificial turf" loading="lazy"><span class="tag">Schools</span></div>
+
+      <!-- LIGHTING -->
+      <div class="gallery-item" data-cat="lighting" data-src="../images/lighting-large-home-evening-uplighting-turf-11.jpg" data-caption="Lighting — Large home evening uplighting"><img src="../images/lighting-large-home-evening-uplighting-turf-11.jpg" alt="Large home with evening uplighting and turf" loading="lazy"><span class="tag">Lighting</span></div>
+      <div class="gallery-item" data-cat="lighting" data-src="../images/lighting-residence-uplighting-shrubs-turf-14.jpg" data-caption="Lighting — Residence uplighting"><img src="../images/lighting-residence-uplighting-shrubs-turf-14.jpg" alt="Residence with uplighting on shrubs and turf" loading="lazy"><span class="tag">Lighting</span></div>
+      <div class="gallery-item" data-cat="lighting" data-src="../images/lighting-home-evening-uplighting-pathway-08.jpg" data-caption="Lighting — Evening pathway lighting"><img src="../images/lighting-home-evening-uplighting-pathway-08.jpg" alt="Home with evening uplighting pathway" loading="lazy"><span class="tag">Lighting</span></div>
+      <div class="gallery-item" data-cat="lighting" data-src="../images/lighting-stone-manor-uplighting-at-dusk-16.jpg" data-caption="Lighting — Stone manor at dusk"><img src="../images/lighting-stone-manor-uplighting-at-dusk-16.jpg" alt="Stone manor with uplighting at dusk" loading="lazy"><span class="tag">Lighting</span></div>
+      <div class="gallery-item" data-cat="lighting" data-src="../images/lighting-backyard-trees-uplighting-evening-02.jpg" data-caption="Lighting — Backyard tree uplighting"><img src="../images/lighting-backyard-trees-uplighting-evening-02.jpg" alt="Backyard trees with evening uplighting" loading="lazy"><span class="tag">Lighting</span></div>
+      <div class="gallery-item" data-cat="lighting" data-src="../images/lighting-front-yards-landscape-uplighting-homes-06.jpg" data-caption="Lighting — Front yard landscape uplighting"><img src="../images/lighting-front-yards-landscape-uplighting-homes-06.jpg" alt="Front yard landscape uplighting" loading="lazy"><span class="tag">Lighting</span></div>
+
+      <!-- INSTALLATION -->
+      <div class="gallery-item" data-cat="installation" data-src="../images/installation-residential-artificial-turf-installation-04.jpg" data-caption="Installation — Residential turf install"><img src="../images/installation-residential-artificial-turf-installation-04.jpg" alt="Residential artificial turf installation in progress" loading="lazy"><span class="tag">Install</span></div>
+      <div class="gallery-item" data-cat="installation" data-src="../images/installation-residential-lawn-installation-panorama-2-05.jpg" data-caption="Installation — Residential lawn panorama"><img src="../images/installation-residential-lawn-installation-panorama-2-05.jpg" alt="Residential lawn installation panorama" loading="lazy"><span class="tag">Install</span></div>
+      <div class="gallery-item" data-cat="installation" data-src="../images/installation-apex-turf-pavers-01.jpg" data-caption="Installation — Turf with apex pavers"><img src="../images/installation-apex-turf-pavers-01.jpg" alt="Turf installation with apex pavers" loading="lazy"><span class="tag">Install</span></div>
+      <div class="gallery-item" data-cat="installation" data-src="../images/installation-turf-paver-06.jpg" data-caption="Installation — Turf &amp; paver combination"><img src="../images/installation-turf-paver-06.jpg" alt="Turf and paver combination installation" loading="lazy"><span class="tag">Install</span></div>
+      <div class="gallery-item" data-cat="installation" data-src="../images/installation-turf-step-stones-07.jpg" data-caption="Installation — Turf with step stones"><img src="../images/installation-turf-step-stones-07.jpg" alt="Turf installation with step stones" loading="lazy"><span class="tag">Install</span></div>
+    </div>
+
+    <div class="gallery-empty" id="galleryEmpty" style="display:none">No images in this category yet. Check back soon.</div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-banner-bg" style="background-image:url('../images/residential-craftsman-home-lush-front-lawn-16.jpg')"></div>
+  <div class="cta-banner-overlay"></div>
+  <div class="container">
+    <div class="cta-banner-content">
+      <h2>See Yourself in This Gallery?</h2>
+      <p>Get a free, no-obligation quote from Monmouth &amp; Ocean County's most trusted artificial turf installer.</p>
+      <div class="cta-banner-actions">
+        <a href="../contact.html" class="btn btn-primary btn-lg">Get Your Free Quote</a>
+        <a href="tel:7322001234" class="btn btn-outline btn-lg">📞 (732) 200-1234</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../images/logo.png" alt="Turf Boss NJ" style="height:56px;filter:brightness(10);margin-bottom:1.25rem"><p class="footer-desc">Monmouth &amp; Ocean County's premier artificial turf installer serving NJ since 2014. Licensed, insured, and 5-star rated.</p><div class="footer-social"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">▶</a><a href="#" class="social-btn">G</a></div></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="../services/artificial-grass.html">Artificial Grass</a></li><li><a href="../services/residential.html">Residential</a></li><li><a href="../services/commercial.html">Commercial</a></li><li><a href="../services/pets.html">Pets &amp; Dog Runs</a></li><li><a href="../services/putting-greens.html">Putting Greens</a></li><li><a href="../low-voltage-lighting.html">Lighting</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="index.html">Resources</a></li><li><a href="../financing.html">Financing</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7322001234">📞 (732) 200-1234</a></li><li><a href="mailto:info@turfbossnj.com">✉️ info@turfbossnj.com</a></li><li>Point Pleasant, NJ 08742</li><li>Mon–Sat 8am–6pm</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Turf Boss NJ. All rights reserved. Licensed &amp; insured.</p></div>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=5"></script>
+<script>
+(function(){
+  const filters = document.querySelectorAll('.gallery-filter');
+  const items = document.querySelectorAll('.gallery-item');
+  const empty = document.getElementById('galleryEmpty');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.filter;
+    let visible = 0;
+    items.forEach(i => {
+      const show = (cat === 'all' || i.dataset.cat === cat);
+      i.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    empty.style.display = visible ? 'none' : 'block';
+  }));
+
+  items.forEach(i => i.addEventListener('click', () => {
+    lightboxImg.src = i.dataset.src;
+    lightboxImg.alt = i.dataset.caption || '';
+    lightboxCap.textContent = i.dataset.caption || '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }));
+
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  lightbox.addEventListener('click', closeLightbox);
+  lightboxClose.addEventListener('click', e => { e.stopPropagation(); closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+})();
+</script>
+
+</body></html>
