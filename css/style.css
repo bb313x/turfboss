@@ -117,7 +117,7 @@ p:last-child { margin-bottom: 0; }
 .mobile-submenu { padding-left:16px; }
 .mobile-submenu a { font-size:0.95rem !important; font-weight:600 !important; color:var(--text-mid) !important; }
 
-.hero { position:relative; min-height:88vh; display:flex; align-items:center; overflow:hidden; background:var(--charcoal); }
+.hero { position:relative; min-height:78vh; display:flex; align-items:flex-start; padding:64px 0 80px; overflow:hidden; background:var(--charcoal); }
 .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; }
 .hero-overlay { position:absolute; inset:0; background:linear-gradient(120deg,rgba(13,40,13,0.88) 40%,rgba(13,40,13,0.5) 100%); }
 .hero-content { position:relative; z-index:2; color:var(--white); max-width:680px; }
