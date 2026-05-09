@@ -580,3 +580,16 @@ select.form-control {
 /* ── Contact info card: refined radius ── */
 .contact-info-card { border-radius: 20px; padding: 44px 36px; }
 
+/* ── Quote modal: textarea generous height + form spacing override ── */
+.quote-modal textarea.form-control { min-height: 140px; line-height: 1.6; }
+.quote-modal .form-group { margin-bottom: 16px; }
+.quote-modal .form-control { background: #fff; border: 1px solid rgba(17,24,39,0.14); }
+.quote-modal .form-control:focus { background: #fff; border-color: var(--green-primary); box-shadow: 0 0 0 4px rgba(46,125,50,0.12); }
+.quote-modal .btn-primary { padding: 16px 24px; font-size: 1rem; border-radius: 12px; margin-top: 6px; }
+
+/* Hero logo on homepage */
+.hero-logo { display: block; }
+@media (max-width: 768px) {
+  .hero-logo { height: 60px !important; margin-bottom: 0.875rem !important; }
+}
+
